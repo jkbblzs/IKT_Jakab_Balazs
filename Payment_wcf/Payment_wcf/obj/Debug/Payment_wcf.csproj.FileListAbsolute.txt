@@ -1,0 +1,7 @@
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\bin\Payment_wcf.dll.config
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\bin\Payment_wcf.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\bin\Payment_wcf.pdb
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.csproj.AssemblyReference.cache
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.csproj.CoreCompileInputs.cache
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.pdb
