@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Web;
+﻿using System.Runtime.Serialization;
 
 namespace Payment_wcf
 {
@@ -11,10 +7,13 @@ namespace Payment_wcf
     {
         [DataMember]
         public int Id { get; set; }
-        
+
         [DataMember]
         public string Name { get; set; }
-        
+
+        [DataMember]
+        public int Age { get; set; }
+
         [DataMember]
         public string City {get; set;}
 

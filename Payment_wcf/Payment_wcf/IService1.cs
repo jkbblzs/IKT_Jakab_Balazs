@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
 
 namespace Payment_wcf
 {
@@ -13,7 +9,7 @@ namespace Payment_wcf
     {
 
         [OperationContract]
-        [WebInvoke(Method = "GET",
+        [WebInvoke(Method = "*",
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
             BodyStyle = WebMessageBodyStyle.WrappedResponse,
@@ -21,36 +17,37 @@ namespace Payment_wcf
             ]
         Customer getCustomer(string id);
 
-        [OperationContract]
-        [WebInvoke(Method = "GET",
+        [OperationContract]//*Ok
+        [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
-           BodyStyle = WebMessageBodyStyle.WrappedResponse,
+           BodyStyle = WebMessageBodyStyle.Bare,
            UriTemplate = "getCustomers")
            ]
         List<Customer> getCustomers();
 
-        [OperationContract]
-        [WebInvoke(Method = "POST",
+        [OperationContract]//*Ok
+        [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
            BodyStyle = WebMessageBodyStyle.WrappedResponse,
-           UriTemplate = "postCustomer/{id}/{name}/{city}")
+           UriTemplate = "postCustomer/{id}/{name}/{age}/{city}")
            ]
 
-        Customer postCustomer(string id, string name, string city);
+        string postCustomer(string id, string name, string age, string city);
 
-        [OperationContract]
-        [WebInvoke(Method = "POST",
+
+        [OperationContract]//*Ok
+        [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
            BodyStyle = WebMessageBodyStyle.WrappedResponse,
-           UriTemplate = "postCustomerPostman")
+           UriTemplate = "putCustomer")
            ]
-        Customer postCustomerPostman(Customer customer);
+        string putCustomer(Customer customer);
 
-        [OperationContract]
-        [WebInvoke(Method = "DELETE",
+        [OperationContract]//*OK
+        [WebInvoke(Method = "*",
           RequestFormat = WebMessageFormat.Json,
           ResponseFormat = WebMessageFormat.Json,
           BodyStyle = WebMessageBodyStyle.WrappedResponse,
@@ -59,15 +56,6 @@ namespace Payment_wcf
 
         string deleteCustomer(string id);
 
-        [OperationContract]
-        [WebInvoke(Method = "PUT",
-         RequestFormat = WebMessageFormat.Json,
-         ResponseFormat = WebMessageFormat.Json,
-         BodyStyle = WebMessageBodyStyle.WrappedResponse,
-         UriTemplate = "putCustomer/{id}/{name}/{city}")
-         ]
-
-        Customer putCustomer(string id, string name, string city);
     }
 
    
